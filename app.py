@@ -4,10 +4,11 @@ import os
 
 from dotenv import load_dotenv
 
-from db import save_message, get_history
+from db import save_message, get_history, init_db
 from cache import get_cached_response, set_cached_response
 
 load_dotenv()
+init_db()
 
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")

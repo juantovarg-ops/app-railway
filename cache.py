@@ -7,7 +7,7 @@ import os
 #    decode_responses=True
 #)
 
-r = redis.from_url(os.getenv("REDIS_URL"))
+r = redis.from_url(os.getenv("REDIS_URL"), decode_responses=True)
 
 def get_cached_response(prompt):
 
